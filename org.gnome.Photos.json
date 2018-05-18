@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.26",
+    "runtime-version": "3.28",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
@@ -55,8 +55,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.36.tar.bz2",
-                    "sha256": "97f0eb01eb6760cb20a4deca0096aceaa77c6d7a88a375c2b872ca1ef3ae29ef"
+                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.48.tar.bz2",
+                    "sha256": "be9bd05cf55c8e46609ac1a30b1f63fe3917e0d7643c4d8d2798b68f3f752615"
                 }
             ]
         },
@@ -68,6 +68,17 @@
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/geocode-glib/3.24/geocode-glib-3.24.0.tar.xz",
                     "sha256": "19c1fef4fd89eb4bfe6decca45ac45a2eca9bb7933be560ce6c172194840c35e"
+                }
+            ]
+        },
+        {
+            "name": "libdazzle",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libdazzle/3.28/libdazzle-3.28.1.tar.xz",
+                    "sha256": "627cdbd1fda815ad8308f8a01ba9a23d4a8fd11cc783e40d6eadbffba2bc4912"
                 }
             ]
         },
@@ -91,8 +102,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.26/gnome-online-accounts-3.26.2.tar.xz",
-                    "sha256": "49f8760d86fe33057eaeeb4f1667bc7f6163e428591e7aed9575563be10b17d1"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.28/gnome-online-accounts-3.28.0.tar.xz",
+                    "sha256": "87bc4ef307604f1ce4f09f6e5c9996ef8d37ca5e0a3bf76f6b27d71844adb40c"
                 }
             ]
         },
@@ -136,8 +147,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.libraw.org/data/LibRaw-0.18.8.tar.gz",
-                    "sha256": "56aca4fd97038923d57d2d17d90aa11d827f1f3d3f1d97e9f5a0d52ff87420e2"
+                    "url": "https://www.libraw.org/data/LibRaw-0.18.11.tar.gz",
+                    "sha256": "7cf724a40a0d8915869498f51062a952167e4f5bae2b6920542c9e0e079a471d"
                 },
                 {
                     "type": "patch",
@@ -152,8 +163,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.3/gegl-0.3.20.tar.bz2",
-                    "sha256": "821568d17dc92a46f6105644c4f4d497daea2be794006140a016ed34e05eb084"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.3/gegl-0.3.34.tar.bz2",
+                    "sha256": "5ca2227655ebf1ab2e252cee3eede219c758336394288ef301b93264b9411304"
                 }
             ]
         },
@@ -274,8 +285,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.26/gnome-photos-3.26.4.tar.xz",
-                    "sha256": "846185cfa3573a29063960757907ef1f943d5e46a02aad4bd493608238901dbb"
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.28/gnome-photos-3.28.0.tar.xz",
+                    "sha256": "2160f0c6f43d6869894016ea8b7276d0da3c7f70c6c8049cff94bfcc8e0448d8"
                 }
             ]
         }
