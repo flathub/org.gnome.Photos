@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.28/libdazzle-3.28.1.tar.xz",
-                    "sha256": "627cdbd1fda815ad8308f8a01ba9a23d4a8fd11cc783e40d6eadbffba2bc4912"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.28/libdazzle-3.28.3.tar.xz",
+                    "sha256": "879f88b87b0b4048bad8aedc0ca4e60869ed9525d84eda1bcfdba7a457bc0a61"
                 }
             ]
         },
