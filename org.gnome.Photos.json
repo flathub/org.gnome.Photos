@@ -260,8 +260,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.3.tar.xz",
-                    "sha256": "5a2fb274c128ec67a920944937b5147ceaf5db16fef6691ea22c4cb841e20580"
+                    "url": "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.4.tar.xz",
+                    "sha256": "ce2f0db52666592d313a04ce14663110eafa8ab08dc213b53e790281362dccd5"
                 }
             ]
         },
