@@ -23,6 +23,7 @@
         "--talk-name=org.freedesktop.Tracker1.Miner.Extract",
         "--talk-name=com.intel.dleyna-renderer",
         "--talk-name=org.gnome.SettingsDaemon",
+        "--talk-name=org.gnome.SettingsDaemon.Housekeeping",
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*"
     ],
@@ -289,8 +290,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.28/gnome-photos-3.28.0.tar.xz",
-                    "sha256": "2160f0c6f43d6869894016ea8b7276d0da3c7f70c6c8049cff94bfcc8e0448d8"
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.28/gnome-photos-3.28.1.tar.xz",
+                    "sha256": "ff8684c3d6f64301ea49271a80c01322b3bd8eed8ce8f4779c4880280cfdd1e0"
                 }
             ]
         }
