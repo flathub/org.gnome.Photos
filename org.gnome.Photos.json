@@ -250,8 +250,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.5.tar.xz",
-                    "sha256": "2977827b8ecb3e15535236180e57dc35e85058d111349bdb6a1597e62a5068fb"
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.7.tar.xz",
+                    "sha256": "fc2f3bbc319136e53e1efb6659fa65b6af45db114b6621008f9abba64fad6820"
                 }
             ]
         },
