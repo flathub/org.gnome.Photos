@@ -222,7 +222,7 @@
         },
         {
             "name": "grilo-plugins",
-            "cleanup": [ "/include" ],
+            "cleanup": [ "/include", "/share/help" ],
             "config-opts": [ "--disable-bookmarks",
                              "--disable-chromaprint",
                              "--disable-dleyna",
