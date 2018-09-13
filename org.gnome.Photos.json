@@ -211,7 +211,7 @@
         {
             "name": "grilo",
             "cleanup": [ "/bin" ],
-            "config-opts": [ "--disable-introspection" ],
+            "config-opts": [ "--disable-introspection", "--disable-test-ui" ],
             "sources": [
                 {
                     "type": "archive",
