@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.30",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
@@ -62,8 +62,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.48.tar.bz2",
-                    "sha256": "be9bd05cf55c8e46609ac1a30b1f63fe3917e0d7643c4d8d2798b68f3f752615"
+                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.58.tar.bz2",
+                    "sha256": "79c9ae576019b8459896014c8822471bb383414c9f99a1b2055e25b4538ced55"
                 }
             ]
         },
@@ -85,8 +85,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.28/libdazzle-3.28.4.tar.xz",
-                    "sha256": "ebdc1b5e57454310ada72ee81495b31bae468f8246728c8cecae12577f60bd27"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.30/libdazzle-3.30.1.tar.xz",
+                    "sha256": "dcc96520e76692aa442206c2bb5971fa28f1279290b7e520e4078ba603d41fb3"
                 }
             ]
         },
@@ -110,8 +110,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.28/gnome-online-accounts-3.28.0.tar.xz",
-                    "sha256": "87bc4ef307604f1ce4f09f6e5c9996ef8d37ca5e0a3bf76f6b27d71844adb40c"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.0.tar.xz",
+                    "sha256": "27d9d88942aa02a1f8d003dfe515483d8483f216ba1e297a8ef67a42cf4bcfc3"
                 }
             ]
         },
@@ -129,6 +129,7 @@
         },
         {
             "name": "liboauth",
+            "config-opts": [ "--enable-nss" ],
             "sources": [
                 {
                     "type": "archive",
@@ -171,8 +172,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.3/gegl-0.3.34.tar.bz2",
-                    "sha256": "5ca2227655ebf1ab2e252cee3eede219c758336394288ef301b93264b9411304"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.8.tar.bz2",
+                    "sha256": "719468eec56ac5b191626a0cb6238f3abe9117e80594890c246acdc89183ae49"
                 }
             ]
         },
@@ -229,36 +230,36 @@
         },
         {
             "name": "grilo-plugins",
+            "buildsystem": "meson",
             "cleanup": [ "/include", "/share/help" ],
-            "config-opts": [ "--disable-bookmarks",
-                             "--disable-chromaprint",
-                             "--disable-dleyna",
-                             "--disable-dmap",
-                             "--disable-filesystem",
-                             "--disable-freebox",
-                             "--disable-gravatar",
-                             "--disable-jamendo",
-                             "--disable-local-metadata",
-                             "--disable-lua-factory",
-                             "--disable-magnatune",
-                             "--disable-metadata-store",
-                             "--disable-opensubtitles",
-                             "--disable-optical-media",
-                             "--disable-podcasts",
-                             "--disable-raitv",
-                             "--disable-shoutcast",
-                             "--disable-tmdb",
-                             "--disable-thetvdb",
-                             "--disable-tracker",
-                             "--disable-vimeo",
-                             "--disable-youtube",
-                             "--enable-flickr",
-                             "--enable-goa" ],
+            "config-opts": [ "-Denable-bookmarks=no",
+                             "-Denable-chromaprint=no",
+                             "-Denable-dleyna=no",
+                             "-Denable-dmap=no",
+                             "-Denable-filesystem=no",
+                             "-Denable-flickr=yes",
+                             "-Denable-freebox=no",
+                             "-Denable-gravatar=no",
+                             "-Denable-jamendo=no",
+                             "-Denable-local-metadata=no",
+                             "-Denable-lua-factory=no",
+                             "-Denable-magnatune=no",
+                             "-Denable-metadata-store=no",
+                             "-Denable-opensubtitles=no",
+                             "-Denable-optical-media=no",
+                             "-Denable-podcasts=no",
+                             "-Denable-raitv=no",
+                             "-Denable-shoutcast=no",
+                             "-Denable-thetvdb=no",
+                             "-Denable-tmdb=no",
+                             "-Denable-tracker=no",
+                             "-Denable-vimeo=no",
+                             "-Denable-youtube=no" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.7.tar.xz",
-                    "sha256": "fc2f3bbc319136e53e1efb6659fa65b6af45db114b6621008f9abba64fad6820"
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.8.tar.xz",
+                    "sha256": "4cdd770b1554ee49cf77705401a35daa3ebff81badc05bd69d7240f50e60d65b"
                 }
             ]
         },
@@ -271,8 +272,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.0/tracker-2.0.4.tar.xz",
-                    "sha256": "ce2f0db52666592d313a04ce14663110eafa8ab08dc213b53e790281362dccd5"
+                    "url": "https://download.gnome.org/sources/tracker/2.1/tracker-2.1.5.tar.xz",
+                    "sha256": "b234b7573773b904dc3e885ff5ec44e86b035767cde783bc50d65d12cd72861e"
                 }
             ]
         },
@@ -288,8 +289,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/2.0/tracker-miners-2.0.5.tar.xz",
-                    "sha256": "6499c083761631b14ad58d463c4af1d69bca842d9a3d11a6c456ced5d0b26802"
+                    "url": "https://download.gnome.org/sources/tracker-miners/2.1/tracker-miners-2.1.5.tar.xz",
+                    "sha256": "f5fd3d4b5573539554d5982ee8ecc10ea84f6693378c5bcc7b162096a63bb8cd"
                 }
             ]
         },
@@ -299,8 +300,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.28/gnome-photos-3.28.1.tar.xz",
-                    "sha256": "ff8684c3d6f64301ea49271a80c01322b3bd8eed8ce8f4779c4880280cfdd1e0"
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.30/gnome-photos-3.30.1.tar.xz",
+                    "sha256": "ce743f1505fff218f24c694e5cb71f97bb24ec9d2e87420d34645ed00f42c1d5"
                 }
             ]
         }
