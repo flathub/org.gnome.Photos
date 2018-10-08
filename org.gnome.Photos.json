@@ -211,8 +211,14 @@
         },
         {
             "name": "grilo",
+            "buildsystem": "meson",
             "cleanup": [ "/bin" ],
-            "config-opts": [ "--disable-introspection", "--disable-test-ui" ],
+            "config-opts": [ "-Denable-introspection=false",
+                             "-Denable-grl-net=true",
+                             "-Denable-grl-pls=false",
+                             "-Denable-gtk-doc=false",
+                             "-Denable-test-ui=false",
+                             "-Denable-vala=false" ],
             "sources": [
                 {
                     "type": "archive",
