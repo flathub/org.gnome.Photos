@@ -194,7 +194,7 @@
         {
             "name": "gexiv2",
             "buildsystem": "meson",
-            "config-opts": [ "-Dintrospection=false" ],
+            "config-opts": [ "-Ddisable-introspection=true" ],
             "sources": [
                 {
                     "type": "archive",
