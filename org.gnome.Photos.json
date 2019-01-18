@@ -157,8 +157,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.libraw.org/data/LibRaw-0.19.1.tar.gz",
-                    "sha256": "a21019db16d87accbb8660056365ab09a204475c77c97b86c922bb972ce15ef6"
+                    "url": "https://www.libraw.org/data/LibRaw-0.19.2.tar.gz",
+                    "sha256": "400d47969292291d297873a06fb0535ccce70728117463927ddd9452aa849644"
                 },
                 {
                     "type": "patch",
