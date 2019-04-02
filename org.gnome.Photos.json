@@ -293,6 +293,8 @@
         },
         {
             "name": "gnome-photos",
+            "buildsystem": "meson",
+            "config-opts": [ "-Ddogtail=false" ],
             "sources": [
                 {
                     "type": "archive",
