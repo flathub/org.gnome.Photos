@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.30",
+    "runtime-version": "3.32",
     "branch": "stable",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
@@ -60,8 +60,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.58.tar.bz2",
-                    "sha256": "79c9ae576019b8459896014c8822471bb383414c9f99a1b2055e25b4538ced55"
+                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.62.tar.bz2",
+                    "sha256": "dc279f174edbcb08821cf37e4ab0bc02e6949369b00b150c759a6c24bfd3f510"
                 }
             ]
         },
@@ -86,8 +86,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.30/libdazzle-3.30.1.tar.xz",
-                    "sha256": "dcc96520e76692aa442206c2bb5971fa28f1279290b7e520e4078ba603d41fb3"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.32/libdazzle-3.32.0.tar.xz",
+                    "sha256": "949ed80bcef8a7816a8f281e0c4389e654a1dfa1912226fe4a0d290e023b28d6"
                 }
             ]
         },
@@ -108,8 +108,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.30/gnome-online-accounts-3.30.0.tar.xz",
-                    "sha256": "27d9d88942aa02a1f8d003dfe515483d8483f216ba1e297a8ef67a42cf4bcfc3"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.32/gnome-online-accounts-3.32.0.tar.xz",
+                    "sha256": "1c19e65771c8d16fa0016ab70d9a1ee2b75a84aeeedd24527a4e41b132e8d4aa"
                 }
             ]
         },
@@ -175,8 +175,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.8.tar.bz2",
-                    "sha256": "719468eec56ac5b191626a0cb6238f3abe9117e80594890c246acdc89183ae49"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.14.tar.bz2",
+                    "sha256": "4c01d58599d8ddb3714effd2675ea1863272cf2d7d9ed3d32aee80c89f859901"
                 }
             ]
         },
@@ -198,12 +198,12 @@
         {
             "name": "gexiv2",
             "buildsystem": "meson",
-            "config-opts": [ "-Ddisable-introspection=true" ],
+            "config-opts": [ "-Dintrospection=false" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gexiv2/0.10/gexiv2-0.10.10.tar.xz",
-                    "sha256": "7d9ad7147ab51ab691edf043c44a0a44de4088c48a12d9c23c26939710e66ce1"
+                    "url": "https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.0.tar.xz",
+                    "sha256": "58f539b0386f36300b76f3afea3a508de4914b27e78f58ee4d142486a42f926a"
                 }
             ]
         },
@@ -220,8 +220,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.6.tar.xz",
-                    "sha256": "1e65ca82dd58020451417fde79310d4b940adc3f63ab59997419c52ed3bc9c91"
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.7.tar.xz",
+                    "sha256": "ea3baf71692df177649a968635ed2bc39855c34c327274245c240f726831e9b7"
                 }
             ]
         },
@@ -269,8 +269,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.1/tracker-2.1.5.tar.xz",
-                    "sha256": "b234b7573773b904dc3e885ff5ec44e86b035767cde783bc50d65d12cd72861e"
+                    "url": "https://download.gnome.org/sources/tracker/2.1/tracker-2.1.8.tar.xz",
+                    "sha256": "cacb3403818b8fd15905b0eff291b6e882481633ed88c24b9a8588290e015528"
                 }
             ]
         },
@@ -286,8 +286,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/2.1/tracker-miners-2.1.5.tar.xz",
-                    "sha256": "f5fd3d4b5573539554d5982ee8ecc10ea84f6693378c5bcc7b162096a63bb8cd"
+                    "url": "https://download.gnome.org/sources/tracker-miners/2.1/tracker-miners-2.1.6.tar.xz",
+                    "sha256": "6d99180700dcdfdbce02531b15b4cabb2622eebb8e9ad478e98b1c89793a29c0"
                 }
             ]
         },
@@ -298,8 +298,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.30/gnome-photos-3.30.1.tar.xz",
-                    "sha256": "ce743f1505fff218f24c694e5cb71f97bb24ec9d2e87420d34645ed00f42c1d5"
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.32/gnome-photos-3.32.0.tar.xz",
+                    "sha256": "52c171326523a34412c416c27b66efd250b7dee79f8ac68ff0ebfb8d59c51b98"
+                },
+                {
+                    "type": "patch",
+                    "path": "gnome-photos-appdata-Add-release-notes-for-Flathub.patch"
                 }
             ]
         }
