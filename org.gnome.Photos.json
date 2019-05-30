@@ -104,10 +104,7 @@
         },
         {
             "name": "gnome-online-accounts",
-            "config-opts": [ "--disable-introspection",
-                             "--disable-telepathy",
-                             "--disable-documentation",
-                             "--disable-backend" ],
+            "config-opts": [ "--disable-backend", "--disable-introspection" ],
             "sources": [
                 {
                     "type": "archive",
