@@ -298,12 +298,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.32/gnome-photos-3.32.0.tar.xz",
-                    "sha256": "52c171326523a34412c416c27b66efd250b7dee79f8ac68ff0ebfb8d59c51b98"
-                },
-                {
-                    "type": "patch",
-                    "path": "gnome-photos-appdata-Add-release-notes-for-Flathub.patch"
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.32/gnome-photos-3.32.1.tar.xz",
+                    "sha256": "162a82eccce1621f355cefd05b9386d341e2e8253905a9dbf57c9c17be14aa5b"
                 }
             ]
         }
