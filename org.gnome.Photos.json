@@ -251,12 +251,12 @@
             "name": "tracker",
             "buildsystem": "meson",
             "cleanup": [ "/bin", "/etc", "/lib/girepository-1.0", "/libexec", "/share/dbus-1", "/share/gir-1.0" ],
-            "config-opts": [ "-Dbash_completion=no", "-Ddocs=false", "-Dsystemd_user_services=no" ],
+            "config-opts": [ "-Dbash_completion=no", "-Ddocs=false", "-Dsystemd_user_services=no", "-Dman=false" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.0.tar.xz",
-                    "sha256": "2c04534da83419b0bc65216e367da51a420f52bb8449f4cc4542c651e5c6bf7b"
+                    "url": "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.4.tar.xz",
+                    "sha256": "577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d"
                 }
             ]
         },
@@ -276,8 +276,8 @@
                          "/share/glib-2.0/schemas/org.freedesktop.Tracker.Extract.gschema.xml",
                          "/share/glib-2.0/schemas/org.freedesktop.Tracker.Writeback.gschema.xml" ],
             "config-opts": [ "-Dextract=false",
+                             "-Ddocs=false",
                              "-Dgeneric_media_extractor=none",
-                             "-Dminer_apps=false",
                              "-Dminer_fs=true",
                              "-Dminer_rss=false",
                              "-Dsystemd_user_services=no",
@@ -285,8 +285,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/2.3/tracker-miners-2.3.0.tar.xz",
-                    "sha256": "ade7d61d1ee22288a5adcf02652e81fd1d3ade4d98270f14203fe8ba4183c7cf"
+                    "url": "https://download.gnome.org/sources/tracker-miners/2.3/tracker-miners-2.3.3.tar.xz",
+                    "sha256": "7472aa28d7862620d3ca2bbec3b103df547d7319c12e95a7f7aa9f9f6dee4b19"
                 }
             ]
         },
