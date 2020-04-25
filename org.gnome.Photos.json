@@ -195,20 +195,34 @@
             ]
         },
         {
+            "name": "totem-pl-parser",
+            "buildsystem": "meson",
+            "config-opts": [ "-Dintrospection=false", "-Denable-gtk-doc=false" ],
+            "cleanup": [ "/include" ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/totem-pl-parser.git",
+                    "commit": "d83c1c2cc1f2c24b150d0dc3b4b4e202041fab7b",
+                    "tag": "V_3_26_5"
+                }
+            ]
+        },
+        {
             "name": "grilo",
             "buildsystem": "meson",
             "cleanup": [ "/bin" ],
             "config-opts": [ "-Denable-introspection=false",
                              "-Denable-grl-net=true",
-                             "-Denable-grl-pls=false",
+                             "-Denable-grl-pls=true",
                              "-Denable-gtk-doc=false",
                              "-Denable-test-ui=false",
                              "-Denable-vala=false" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.10.tar.xz",
-                    "sha256": "7e44b2e74c31ed24eb97e43265a9e41effe8660287b02295111805c7bda7f1e8"
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.12.tar.xz",
+                    "sha256": "dbfbd6082103288592af97568180b9cc81a336a274ed5160412f87675ec11a71"
                 }
             ]
         },
@@ -242,8 +256,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.10.tar.xz",
-                    "sha256": "803b360fdb6d5fde1e647bdc40c16de3031b1a95b347b48b65fe4fc27a548d4a"
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.11.tar.xz",
+                    "sha256": "dde2e605b1994341c6bf012493e056b406b08571834dea3b3c671d5b8b1dcd73"
                 }
             ]
         },
