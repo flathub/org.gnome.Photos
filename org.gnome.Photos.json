@@ -63,8 +63,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.1.tar.xz",
-                    "sha256": "5baa6ab76a76c9fc567e4c32c3af2cd1d1784934c255bc5a62c512e6af6bde1c"
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz",
+                    "sha256": "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1"
                 }
             ]
         },
@@ -75,8 +75,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.34/libdazzle-3.34.0.tar.xz",
-                    "sha256": "8d8524bcb2acd6bda0fb3efe96f0bf3e8860ca18eed1fc55dc1c27756b49637c"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.36/libdazzle-3.36.0.tar.xz",
+                    "sha256": "82b31bbf550fc62970c78bf7f9d55e5fae5b8ea13b24fe2d13c8c6039409d958"
                 }
             ]
         },
@@ -97,8 +97,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.32/gnome-online-accounts-3.32.0.tar.xz",
-                    "sha256": "1c19e65771c8d16fa0016ab70d9a1ee2b75a84aeeedd24527a4e41b132e8d4aa"
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
+                    "sha256": "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e"
                 }
             ]
         },
