@@ -313,6 +313,10 @@
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/gnome-photos/3.34/gnome-photos-3.34.2.tar.xz",
                     "sha256": "3c59c76ef28618ec055a1799d1040287b90a0b021feb0a02b1eac28e9c2eb41a"
+                },
+                {
+                    "type": "patch",
+                    "path": "fix-appdata.xml.patch"
                 }
             ]
         }
