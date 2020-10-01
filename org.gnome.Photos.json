@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "3.38",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
     "finish-args": [
@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.74.tar.xz",
-                    "sha256": "9a710b6950da37ada94cd9e2046cbce26de12473da32a7b79b7d1432fc66ce0e"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/babl/0.1/babl-0.1.80.tar.xz",
+                    "sha256": "f75ccc39af42585099bcb4731071dc5316b7542c5e232f63e278cd1ea2c04f8e"
                 }
             ]
         },
@@ -64,8 +64,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.36/libdazzle-3.36.0.tar.xz",
-                    "sha256": "82b31bbf550fc62970c78bf7f9d55e5fae5b8ea13b24fe2d13c8c6039409d958"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.38/libdazzle-3.38.0.tar.xz",
+                    "sha256": "e18af28217943bcec106585298a91ec3da48aa3ad62fd0992f23f0c70cd1678f"
                 }
             ]
         },
@@ -128,8 +128,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.12.tar.xz",
-                    "sha256": "a0fd6f8820e8bae019c1f6ffab5af7fcd6d7f147915bb968b56df3ad61b42318"
+                    "url": "https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.13.tar.xz",
+                    "sha256": "eab9ef792c3c2b9ece19d45aea15225aba8df2521bc12785b1b2d3318d8c472e"
                 }
             ]
         },
@@ -162,8 +162,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.22.tar.xz",
-                    "sha256": "1888ec41dfd19fe28273795c2209efc1a542be742691561816683990dc642c61"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.26.tar.xz",
+                    "sha256": "0f371e2ed2b92162fefd3dde743e648ca08a6a1b2b05004867fbddc7e211e424"
                 }
             ]
         },
@@ -177,8 +177,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://exiv2.org/builds/exiv2-0.27.2-Source.tar.gz",
-                    "sha256": "2652f56b912711327baff6dc0c90960818211cf7ab79bb5e1eb59320b78d153f"
+                    "url": "https://exiv2.org/builds/exiv2-0.27.3-Source.tar.gz",
+                    "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778"
                 }
             ]
         },
@@ -201,10 +201,9 @@
             "cleanup": [ "/include" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/totem-pl-parser.git",
-                    "commit": "d83c1c2cc1f2c24b150d0dc3b4b4e202041fab7b",
-                    "tag": "V_3_26_5"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.5.tar.xz",
+                    "sha256": "5370de46f2e848221779275479b96ac39115b1efd2b0293d4afa87e22c8c528c"
                 }
             ]
         },
@@ -221,8 +220,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.12.tar.xz",
-                    "sha256": "dbfbd6082103288592af97568180b9cc81a336a274ed5160412f87675ec11a71"
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.13.tar.xz",
+                    "sha256": "d14837f22341943ed8a189d9f0827a17016b802d18d0ed080e1413de0fdc927b"
                 }
             ]
         },
@@ -256,8 +255,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.11.tar.xz",
-                    "sha256": "dde2e605b1994341c6bf012493e056b406b08571834dea3b3c671d5b8b1dcd73"
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.12.tar.xz",
+                    "sha256": "c6b6df086a164d65c206d70139ce80591f8feca3545612e45b823fb4fe4b2577"
                 }
             ]
         },
@@ -269,8 +268,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.4.tar.xz",
-                    "sha256": "577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d"
+                    "url": "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.6.tar.xz",
+                    "sha256": "bd1eb4122135296fa7b57b1c3fa0ed602cf7d06c0b8e534d0bd17ff5f97feef2"
                 }
             ]
         },
@@ -299,8 +298,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/2.3/tracker-miners-2.3.3.tar.xz",
-                    "sha256": "7472aa28d7862620d3ca2bbec3b103df547d7319c12e95a7f7aa9f9f6dee4b19"
+                    "url": "https://download.gnome.org/sources/tracker-miners/2.3/tracker-miners-2.3.5.tar.xz",
+                    "sha256": "9509d37fb29acd233058f4df5bd1234b692ac6f946bc2e5f7b8dbf51dfe5b9fa"
                 }
             ]
         },
@@ -311,8 +310,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.34/gnome-photos-3.34.2.tar.xz",
-                    "sha256": "3c59c76ef28618ec055a1799d1040287b90a0b021feb0a02b1eac28e9c2eb41a"
+                    "url": "https://download.gnome.org/sources/gnome-photos/3.38/gnome-photos-3.38.0.tar.xz",
+                    "sha256": "667f39477579d577470740e01f37b05c62e461e6f6da6377724d8f3993e1c4c4"
                 },
                 {
                     "type": "patch",
