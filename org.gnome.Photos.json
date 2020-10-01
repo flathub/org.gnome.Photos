@@ -8,6 +8,7 @@
         "--env=TRACKER_SPARQL_BACKEND=bus",
         "--filesystem=xdg-download",
         "--filesystem=xdg-pictures",
+        "--metadata=X-DConf=migrate-path=/org/gnome/photos/",
         "--share=ipc",
         "--share=network",
         "--socket=fallback-x11",
@@ -273,7 +274,7 @@
                 }
             ]
         },
-	   	"shared-modules/intltool/intltool-0.51.json",
+        "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "tracker-miners",
             "buildsystem": "meson",
