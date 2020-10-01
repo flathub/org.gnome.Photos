@@ -105,21 +105,10 @@
             ]
         },
         {
-            "name": "liboauth",
-            "config-opts": [ "--enable-nss" ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://netix.dl.sourceforge.net/project/liboauth/liboauth-1.0.3.tar.gz",
-                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
-                }
-            ]
-        },
-        {
             "name": "libgdata",
             "buildsystem": "meson",
             "config-opts": [ "-Dalways_build_tests=false",
-                             "-Doauth1=enabled",
+                             "-Doauth1=disabled",
                              "-Dgtk=disabled",
                              "-Dgtk_doc=false",
                              "-Dinstalled_tests=false",
@@ -146,8 +135,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.libraw.org/data/LibRaw-0.19.5.tar.gz",
-                    "sha256": "40a262d7cc71702711a0faec106118ee004f86c86cc228281d12d16da03e02f5"
+                    "url": "https://www.libraw.org/data/LibRaw-0.20.0.tar.gz",
+                    "sha256": "1f0a383da2ce9f409087facd28261decbf6be72cc90c78cd003b0766e4d694a3"
                 },
                 {
                     "type": "patch",
@@ -174,7 +163,8 @@
             "cleanup": [ "/lib/exiv2" ],
             "config-opts": [ "-DCMAKE_BUILD_TYPE=Release",
                              "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
-                             "-DEXIV2_BUILD_SAMPLES=OFF" ],
+                             "-DEXIV2_BUILD_SAMPLES=OFF",
+                             "-DEXIV2_ENABLE_NLS=ON"],
             "sources": [
                 /* Commit post 0.27.3 with aarch64 compatibility */
                 {
@@ -206,6 +196,17 @@
                     "type": "archive",
                     "url": "https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.5.tar.xz",
                     "sha256": "5370de46f2e848221779275479b96ac39115b1efd2b0293d4afa87e22c8c528c"
+                }
+            ]
+        },
+        {
+            "name": "liboauth",
+            "config-opts": [ "--enable-nss" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://netix.dl.sourceforge.net/project/liboauth/liboauth-1.0.3.tar.gz",
+                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
                 }
             ]
         },
@@ -253,7 +254,8 @@
                              "-Denable-tmdb=no",
                              "-Denable-tracker=no",
                              "-Denable-vimeo=no",
-                             "-Denable-youtube=no" ],
+                             "-Denable-youtube=no",
+                             "--wrap-mode=nofallback" ],
             "sources": [
                 {
                     "type": "archive",
