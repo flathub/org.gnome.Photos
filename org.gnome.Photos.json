@@ -176,10 +176,11 @@
                              "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
                              "-DEXIV2_BUILD_SAMPLES=OFF" ],
             "sources": [
+                /* Commit post 0.27.3 with aarch64 compatibility */
                 {
-                    "type": "archive",
-                    "url": "https://exiv2.org/builds/exiv2-0.27.3-Source.tar.gz",
-                    "sha256": "a79f5613812aa21755d578a297874fb59a85101e793edc64ec2c6bd994e3e778"
+                    "type": "git",
+                    "url": "https://github.com/exiv2/exiv2",
+                    "commit": "6215d57d98c5feeecd62aa18398986e1466751d9"
                 }
             ]
         },
