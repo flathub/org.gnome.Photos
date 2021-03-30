@@ -1,10 +1,11 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
     "finish-args": [
+        "--add-policy=Tracker3.dbus:org.freedesktop.Tracker3.Miner.Files=tracker:Pictures",
         "--env=TRACKER_SPARQL_BACKEND=bus",
         "--filesystem=xdg-download",
         "--filesystem=xdg-pictures",
@@ -13,14 +14,13 @@
         "--share=network",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--socket=x11",
         "--talk-name=org.freedesktop.FileManager1",
-        "--talk-name=org.freedesktop.Tracker1",
-        "--talk-name=org.freedesktop.Tracker1.Miner.Extract",
+        "--talk-name=org.freedesktop.Tracker3.Miner.Files.Control",
         "--talk-name=com.intel.dleyna-renderer",
         "--talk-name=org.gnome.ControlCenter",
         "--talk-name=org.gnome.SettingsDaemon",
         "--talk-name=org.gnome.SettingsDaemon.Housekeeping",
+        "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs",
         "--talk-name=org.gtk.vfs.*"
     ],
@@ -65,8 +65,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.38/libdazzle-3.38.0.tar.xz",
-                    "sha256": "e18af28217943bcec106585298a91ec3da48aa3ad62fd0992f23f0c70cd1678f"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.40/libdazzle-3.40.0.tar.xz",
+                    "sha256": "dba99a7e65fa6662c012b306e5d0f99ff3b466a46059ea7aa0104aaf65ce4ba5"
                 }
             ]
         },
@@ -118,8 +118,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.13.tar.xz",
-                    "sha256": "eab9ef792c3c2b9ece19d45aea15225aba8df2521bc12785b1b2d3318d8c472e"
+                    "url": "https://download.gnome.org/sources/libgdata/0.18/libgdata-0.18.1.tar.xz",
+                    "sha256": "dd8592eeb6512ad0a8cf5c8be8c72e76f74bfe6b23e4dd93f0756ee0716804c7"
                 }
             ]
         },
@@ -264,41 +264,23 @@
                 }
             ]
         },
-        {
-            "name": "tracker",
-            "buildsystem": "meson",
-            "cleanup": [ "/bin", "/etc", "/lib/girepository-1.0", "/share/dbus-1", "/share/gir-1.0" ],
-            "config-opts": [ "-Dbash_completion=no", "-Ddocs=false", "-Dsystemd_user_services=no", "-Dman=false" ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.6.tar.xz",
-                    "sha256": "bd1eb4122135296fa7b57b1c3fa0ed602cf7d06c0b8e534d0bd17ff5f97feef2"
-                }
-            ]
-        },
         "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "tracker-miners",
             "buildsystem": "meson",
-            "cleanup": [ "/etc",
-                         "/share/dbus-1/services/org.freedesktop.Tracker1.Miner.Extract.service",
-                         "/share/dbus-1/services/org.freedesktop.Tracker1.Writeback.service",
-                         "/share/tracker/miners/org.freedesktop.Tracker1.Miner.Applications.service",
-                         "/share/tracker/miners/org.freedesktop.Tracker1.Miner.Extract.service",
-                         "/share/tracker/miners/org.freedesktop.Tracker1.Miner.RSS.service",
-                         "/share/glib-2.0/schemas/org.freedesktop.Tracker.Writeback.gschema.xml" ],
-            "config-opts": [ "-Dextract=true",
-                             "-Ddocs=false",
+            "config-opts": [ "-Ddefault_index_single_directories=",
+                             "-Ddefault_index_recursive_directories=&PICTURES",
+                             "-Ddomain_prefix=org.gnome.Photos",
+                             "-Dman=false",
                              "-Dminer_fs=true",
+                             "-Dminer_fs_cache_location=$XDG_CACHE_HOME/gnome-photos/miner/files",
                              "-Dminer_rss=false",
-                             "-Dsystemd_user_services=no",
-                             "-Dwriteback=false" ],
+                             "-Dsystemd_user_services=false"],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/2.3/tracker-miners-2.3.5.tar.xz",
-                    "sha256": "9509d37fb29acd233058f4df5bd1234b692ac6f946bc2e5f7b8dbf51dfe5b9fa"
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.1/tracker-miners-3.1.0.tar.xz",
+                    "sha256": "695885f7044042b6b53e2ae3f824de36f298c2197de12d171977157771646d00"
                 }
             ]
         },
@@ -309,12 +291,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.38/gnome-photos-3.38.0.tar.xz",
-                    "sha256": "667f39477579d577470740e01f37b05c62e461e6f6da6377724d8f3993e1c4c4"
-                },
-                {
-                    "type": "patch",
-                    "path": "fix-appdata.xml.patch"
+                    "url": "https://download.gnome.org/sources/gnome-photos/40/gnome-photos-40.0.tar.xz",
+                    "sha256": "e02d73e138af8b2868b5cad7faa1bdd278aeade3b6c3c92836511a4e6f3af1af"
                 }
             ]
         }
