@@ -1,26 +1,27 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.36",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
     "finish-args": [
+        "--add-policy=Tracker3.dbus:org.freedesktop.Tracker3.Miner.Files=tracker:Pictures",
         "--env=TRACKER_SPARQL_BACKEND=bus",
         "--filesystem=xdg-download",
         "--filesystem=xdg-pictures",
+        "--metadata=X-DConf=migrate-path=/org/gnome/photos/",
         "--share=ipc",
         "--share=network",
         "--socket=fallback-x11",
         "--socket=wayland",
-        "--socket=x11",
         "--talk-name=org.freedesktop.FileManager1",
-        "--talk-name=org.freedesktop.Tracker1",
-        "--talk-name=org.freedesktop.Tracker1.Miner.Extract",
+        "--talk-name=org.freedesktop.Tracker3.Miner.Files.Control",
         "--talk-name=com.intel.dleyna-renderer",
         "--talk-name=org.gnome.ControlCenter",
         "--talk-name=org.gnome.SettingsDaemon",
         "--talk-name=org.gnome.SettingsDaemon.Housekeeping",
-        "--talk-name=org.gtk.vfs",
+        "--filesystem=xdg-run/gvfs",
+        "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*"
     ],
     "cleanup": [ "/include", "/lib/pkgconfig",
@@ -38,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnome.org/pub/gimp/babl/0.1/babl-0.1.74.tar.xz",
-                    "sha256": "9a710b6950da37ada94cd9e2046cbce26de12473da32a7b79b7d1432fc66ce0e"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/babl/0.1/babl-0.1.80.tar.xz",
+                    "sha256": "f75ccc39af42585099bcb4731071dc5316b7542c5e232f63e278cd1ea2c04f8e"
                 }
             ]
         },
@@ -64,8 +65,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.36/libdazzle-3.36.0.tar.xz",
-                    "sha256": "82b31bbf550fc62970c78bf7f9d55e5fae5b8ea13b24fe2d13c8c6039409d958"
+                    "url": "https://download.gnome.org/sources/libdazzle/3.40/libdazzle-3.40.0.tar.xz",
+                    "sha256": "dba99a7e65fa6662c012b306e5d0f99ff3b466a46059ea7aa0104aaf65ce4ba5"
                 }
             ]
         },
@@ -104,21 +105,10 @@
             ]
         },
         {
-            "name": "liboauth",
-            "config-opts": [ "--enable-nss" ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://netix.dl.sourceforge.net/project/liboauth/liboauth-1.0.3.tar.gz",
-                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
-                }
-            ]
-        },
-        {
             "name": "libgdata",
             "buildsystem": "meson",
             "config-opts": [ "-Dalways_build_tests=false",
-                             "-Doauth1=enabled",
+                             "-Doauth1=disabled",
                              "-Dgtk=disabled",
                              "-Dgtk_doc=false",
                              "-Dinstalled_tests=false",
@@ -128,8 +118,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libgdata/0.17/libgdata-0.17.12.tar.xz",
-                    "sha256": "a0fd6f8820e8bae019c1f6ffab5af7fcd6d7f147915bb968b56df3ad61b42318"
+                    "url": "https://download.gnome.org/sources/libgdata/0.18/libgdata-0.18.1.tar.xz",
+                    "sha256": "dd8592eeb6512ad0a8cf5c8be8c72e76f74bfe6b23e4dd93f0756ee0716804c7"
                 }
             ]
         },
@@ -145,12 +135,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://www.libraw.org/data/LibRaw-0.19.5.tar.gz",
-                    "sha256": "40a262d7cc71702711a0faec106118ee004f86c86cc228281d12d16da03e02f5"
+                    "url": "https://www.libraw.org/data/LibRaw-0.20.2.tar.gz",
+                    "sha256": "dc1b486c2003435733043e4e05273477326e51c3ea554c6864a4eafaff1004a6"
                 },
                 {
-                    "type": "patch",
-                    "path": "libraw-pkgconfig.patch"
+                    "type": "shell",
+                    "commands": [ "autoreconf -vfi" ]
                 }
             ]
         },
@@ -162,8 +152,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.22.tar.xz",
-                    "sha256": "1888ec41dfd19fe28273795c2209efc1a542be742691561816683990dc642c61"
+                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.26.tar.xz",
+                    "sha256": "0f371e2ed2b92162fefd3dde743e648ca08a6a1b2b05004867fbddc7e211e424"
                 }
             ]
         },
@@ -173,12 +163,14 @@
             "cleanup": [ "/lib/exiv2" ],
             "config-opts": [ "-DCMAKE_BUILD_TYPE=Release",
                              "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
-                             "-DEXIV2_BUILD_SAMPLES=OFF" ],
+                             "-DEXIV2_BUILD_SAMPLES=OFF",
+                             "-DEXIV2_ENABLE_NLS=ON"],
             "sources": [
+                /* Commit post 0.27.3 with aarch64 compatibility */
                 {
-                    "type": "archive",
-                    "url": "https://exiv2.org/builds/exiv2-0.27.2-Source.tar.gz",
-                    "sha256": "2652f56b912711327baff6dc0c90960818211cf7ab79bb5e1eb59320b78d153f"
+                    "type": "git",
+                    "url": "https://github.com/exiv2/exiv2",
+                    "commit": "6215d57d98c5feeecd62aa18398986e1466751d9"
                 }
             ]
         },
@@ -201,10 +193,20 @@
             "cleanup": [ "/include" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/totem-pl-parser.git",
-                    "commit": "d83c1c2cc1f2c24b150d0dc3b4b4e202041fab7b",
-                    "tag": "V_3_26_5"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.5.tar.xz",
+                    "sha256": "5370de46f2e848221779275479b96ac39115b1efd2b0293d4afa87e22c8c528c"
+                }
+            ]
+        },
+        {
+            "name": "liboauth",
+            "config-opts": [ "--enable-nss" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://netix.dl.sourceforge.net/project/liboauth/liboauth-1.0.3.tar.gz",
+                    "sha256": "0df60157b052f0e774ade8a8bac59d6e8d4b464058cc55f9208d72e41156811f"
                 }
             ]
         },
@@ -221,8 +223,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.12.tar.xz",
-                    "sha256": "dbfbd6082103288592af97568180b9cc81a336a274ed5160412f87675ec11a71"
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.13.tar.xz",
+                    "sha256": "d14837f22341943ed8a189d9f0827a17016b802d18d0ed080e1413de0fdc927b"
                 }
             ]
         },
@@ -252,55 +254,33 @@
                              "-Denable-tmdb=no",
                              "-Denable-tracker=no",
                              "-Denable-vimeo=no",
-                             "-Denable-youtube=no" ],
+                             "-Denable-youtube=no",
+                             "--wrap-mode=nofallback" ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.11.tar.xz",
-                    "sha256": "dde2e605b1994341c6bf012493e056b406b08571834dea3b3c671d5b8b1dcd73"
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.12.tar.xz",
+                    "sha256": "c6b6df086a164d65c206d70139ce80591f8feca3545612e45b823fb4fe4b2577"
                 }
             ]
         },
-        {
-            "name": "tracker",
-            "buildsystem": "meson",
-            "cleanup": [ "/bin", "/etc", "/lib/girepository-1.0", "/libexec", "/share/dbus-1", "/share/gir-1.0" ],
-            "config-opts": [ "-Dbash_completion=no", "-Ddocs=false", "-Dsystemd_user_services=no", "-Dman=false" ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker/2.3/tracker-2.3.4.tar.xz",
-                    "sha256": "577952244ab977c78b0b88e2f63c4197eaba16e4d66bff692b7f58993e06516d"
-                }
-            ]
-        },
-	   	"shared-modules/intltool/intltool-0.51.json",
+        "shared-modules/intltool/intltool-0.51.json",
         {
             "name": "tracker-miners",
             "buildsystem": "meson",
-            "cleanup": [ "/etc",
-                         "/lib",
-                         "/libexec",
-                         "/share/dbus-1/services/org.freedesktop.Tracker1.Miner.Extract.service",
-                         "/share/dbus-1/services/org.freedesktop.Tracker1.Writeback.service",
-                         "/share/tracker/miners/org.freedesktop.Tracker1.Miner.Applications.service",
-                         "/share/tracker/miners/org.freedesktop.Tracker1.Miner.Extract.service",
-                         "/share/tracker/miners/org.freedesktop.Tracker1.Miner.RSS.service",
-                         "/share/tracker-miners",
-                         "/share/glib-2.0/schemas/org.freedesktop.Tracker.Extract.gschema.xml",
-                         "/share/glib-2.0/schemas/org.freedesktop.Tracker.Writeback.gschema.xml" ],
-            "config-opts": [ "-Dextract=false",
-                             "-Ddocs=false",
-                             "-Dgeneric_media_extractor=none",
+            "config-opts": [ "-Ddefault_index_single_directories=",
+                             "-Ddefault_index_recursive_directories=&PICTURES",
+                             "-Ddomain_prefix=org.gnome.Photos",
+                             "-Dman=false",
                              "-Dminer_fs=true",
+                             "-Dminer_fs_cache_location=$XDG_CACHE_HOME/gnome-photos/miner/files",
                              "-Dminer_rss=false",
-                             "-Dsystemd_user_services=no",
-                             "-Dwriteback=false" ],
+                             "-Dsystemd_user_services=false"],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/2.3/tracker-miners-2.3.3.tar.xz",
-                    "sha256": "7472aa28d7862620d3ca2bbec3b103df547d7319c12e95a7f7aa9f9f6dee4b19"
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.1/tracker-miners-3.1.0.tar.xz",
+                    "sha256": "695885f7044042b6b53e2ae3f824de36f298c2197de12d171977157771646d00"
                 }
             ]
         },
@@ -311,12 +291,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/3.34/gnome-photos-3.34.2.tar.xz",
-                    "sha256": "3c59c76ef28618ec055a1799d1040287b90a0b021feb0a02b1eac28e9c2eb41a"
+                    "url": "https://download.gnome.org/sources/gnome-photos/40/gnome-photos-40.0.tar.xz",
+                    "sha256": "e02d73e138af8b2868b5cad7faa1bdd278aeade3b6c3c92836511a4e6f3af1af"
                 },
                 {
                     "type": "patch",
-                    "path": "fix-appdata.xml.patch"
+                    "path": "header_vertical_align.patch"
                 }
             ]
         }
