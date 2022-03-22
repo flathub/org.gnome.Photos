@@ -24,18 +24,26 @@
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=org.gtk.vfs.*"
     ],
-    "cleanup": [ "/include", "/lib/pkgconfig",
-                 "/share/pkgconfig", "/share/aclocal",
-                 "/man", "/share/man", "/share/gtk-doc",
-                 "/share/vala",
-                 "*.la", "*.a"
-               ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/man",
+        "/share/man",
+        "/share/gtk-doc",
+        "/share/vala",
+        "*.la",
+        "*.a"
+    ],
     "modules": [
         {
             "name": "babl",
             "buildsystem": "meson",
-            "config-opts": [ "-Denable-gir=false",
-                             "-Dwith-docs=false" ],
+            "config-opts": [
+                "-Denable-gir=false",
+                "-Dwith-docs=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -47,9 +55,11 @@
         {
             "name": "geocode-glib",
             "buildsystem": "meson",
-            "config-opts": [ "-Denable-installed-tests=false",
-                             "-Denable-gtk-doc=false",
-                             "-Denable-introspection=false" ],
+            "config-opts": [
+                "-Denable-installed-tests=false",
+                "-Denable-gtk-doc=false",
+                "-Denable-introspection=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -65,12 +75,14 @@
         {
             "name": "libdazzle",
             "buildsystem": "meson",
-            "config-opts": [ "-Dwith_introspection=false" ],
+            "config-opts": [
+                "-Dwith_introspection=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libdazzle/3.40/libdazzle-3.40.0.tar.xz",
-                    "sha256": "dba99a7e65fa6662c012b306e5d0f99ff3b466a46059ea7aa0104aaf65ce4ba5",
+                    "url": "https://download.gnome.org/sources/libdazzle/3.44/libdazzle-3.44.0.tar.xz",
+                    "sha256": "3cd3e45eb6e2680cb05d52e1e80dd8f9d59d4765212f0e28f78e6c1783d18eae",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libdazzle"
@@ -80,7 +92,9 @@
         },
         {
             "name": "librest",
-            "config-opts": [ "--disable-introspection" ],
+            "config-opts": [
+                "--disable-introspection"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -95,12 +109,15 @@
         },
         {
             "name": "gnome-online-accounts",
-            "config-opts": [ "--disable-backend", "--disable-introspection" ],
+            "config-opts": [
+                "--disable-backend",
+                "--disable-introspection"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.36/gnome-online-accounts-3.36.0.tar.xz",
-                    "sha256": "1c8f62990833ca41188dbb80c5e99d99b57a62608ca675bbcd37bc2244742f2e",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.40/gnome-online-accounts-3.40.1.tar.xz",
+                    "sha256": "955a03128d0e87855d34d7c534e088f6286ed7ac01baa4ef824ef42a2cb39aad",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-online-accounts"
@@ -110,13 +127,17 @@
         },
         {
             "name": "libgfbgraph",
-            "cleanup": [ "/doc" ],
-            "config-opts": [ "--disable-introspection" ],
+            "cleanup": [
+                "/doc"
+            ],
+            "config-opts": [
+                "--disable-introspection"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.4.tar.xz",
-                    "sha256": "6065391f35e7335588cc6b0cc4c1abbce7341488573a654551264cb9793b9379",
+                    "url": "https://download.gnome.org/sources/gfbgraph/0.2/gfbgraph-0.2.5.tar.xz",
+                    "sha256": "9cb381b3f78ba1136df97af3f06e3b11dcc2ab339ac08f74eda0f8057d6603e3",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gfbgraph"
@@ -127,14 +148,15 @@
         {
             "name": "libgdata",
             "buildsystem": "meson",
-            "config-opts": [ "-Dalways_build_tests=false",
-                             "-Doauth1=disabled",
-                             "-Dgtk=disabled",
-                             "-Dgtk_doc=false",
-                             "-Dinstalled_tests=false",
-                             "-Dintrospection=false",
-                             "-Dvapi=false" ],
-
+            "config-opts": [
+                "-Dalways_build_tests=false",
+                "-Doauth1=disabled",
+                "-Dgtk=disabled",
+                "-Dgtk_doc=false",
+                "-Dinstalled_tests=false",
+                "-Dintrospection=false",
+                "-Dvapi=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -149,13 +171,17 @@
         },
         {
             "name": "libraw",
-            "config-opts": [ "--disable-examples",
-                             "--disable-jasper",
-                             "--disable-static",
-                             "--enable-jpeg",
-                             "--enable-lcms",
-                             "--enable-openmp" ],
-            "cleanup": [ "/share/doc" ],
+            "config-opts": [
+                "--disable-examples",
+                "--disable-jasper",
+                "--disable-static",
+                "--enable-jpeg",
+                "--enable-lcms",
+                "--enable-openmp"
+            ],
+            "cleanup": [
+                "/share/doc"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -164,15 +190,21 @@
                 },
                 {
                     "type": "shell",
-                    "commands": [ "autoreconf -vfi" ]
+                    "commands": [
+                        "autoreconf -vfi"
+                    ]
                 }
             ]
         },
         {
             "name": "gegl",
-            "cleanup": [ "/bin" ],
+            "cleanup": [
+                "/bin"
+            ],
             "buildsystem": "meson",
-            "config-opts": [ "-Dintrospection=false" ],
+            "config-opts": [
+                "-Dintrospection=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -184,11 +216,15 @@
         {
             "name": "exiv2",
             "buildsystem": "cmake-ninja",
-            "cleanup": [ "/lib/exiv2" ],
-            "config-opts": [ "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
-                             "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
-                             "-DEXIV2_BUILD_SAMPLES=OFF",
-                             "-DEXIV2_ENABLE_NLS=ON"],
+            "cleanup": [
+                "/lib/exiv2"
+            ],
+            "config-opts": [
+                "-DCMAKE_BUILD_TYPE=RelWithDebInfo",
+                "-DEXIV2_BUILD_EXIV2_COMMAND=OFF",
+                "-DEXIV2_BUILD_SAMPLES=OFF",
+                "-DEXIV2_ENABLE_NLS=ON"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -200,12 +236,14 @@
         {
             "name": "gexiv2",
             "buildsystem": "meson",
-            "config-opts": [ "-Dintrospection=false" ],
+            "config-opts": [
+                "-Dintrospection=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.1.tar.xz",
-                    "sha256": "8aeafd59653ea88f6b78cb03780ee9fd61a2f993070c5f0d0976bed93ac2bd77",
+                    "url": "https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.0.tar.xz",
+                    "sha256": "e58279a6ff20b6f64fa499615da5e9b57cf65ba7850b72fafdf17221a9d6d69e",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gexiv2"
@@ -216,13 +254,18 @@
         {
             "name": "totem-pl-parser",
             "buildsystem": "meson",
-            "config-opts": [ "-Dintrospection=false", "-Denable-gtk-doc=false" ],
-            "cleanup": [ "/include" ],
+            "config-opts": [
+                "-Dintrospection=false",
+                "-Denable-gtk-doc=false"
+            ],
+            "cleanup": [
+                "/include"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.5.tar.xz",
-                    "sha256": "5370de46f2e848221779275479b96ac39115b1efd2b0293d4afa87e22c8c528c",
+                    "url": "https://download.gnome.org/sources/totem-pl-parser/3.26/totem-pl-parser-3.26.6.tar.xz",
+                    "sha256": "c0df0f68d5cf9d7da43c81c7f13f11158358368f98c22d47722f3bd04bd3ac1c",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "totem-pl-parser"
@@ -232,7 +275,9 @@
         },
         {
             "name": "liboauth",
-            "config-opts": [ "--enable-nss" ],
+            "config-opts": [
+                "--enable-nss"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -244,18 +289,22 @@
         {
             "name": "grilo",
             "buildsystem": "meson",
-            "cleanup": [ "/bin" ],
-            "config-opts": [ "-Denable-introspection=false",
-                             "-Denable-grl-net=true",
-                             "-Denable-grl-pls=true",
-                             "-Denable-gtk-doc=false",
-                             "-Denable-test-ui=false",
-                             "-Denable-vala=false" ],
+            "cleanup": [
+                "/bin"
+            ],
+            "config-opts": [
+                "-Denable-introspection=false",
+                "-Denable-grl-net=true",
+                "-Denable-grl-pls=true",
+                "-Denable-gtk-doc=false",
+                "-Denable-test-ui=false",
+                "-Denable-vala=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.13.tar.xz",
-                    "sha256": "d14837f22341943ed8a189d9f0827a17016b802d18d0ed080e1413de0fdc927b",
+                    "url": "https://download.gnome.org/sources/grilo/0.2/grilo-0.2.15.tar.xz",
+                    "sha256": "6f5d2583250a68e76d281edaa08adb880d5a78ed46f9ecd22ae4715f1dd66815",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "grilo"
@@ -266,36 +315,41 @@
         {
             "name": "grilo-plugins",
             "buildsystem": "meson",
-            "cleanup": [ "/include", "/share/help" ],
-            "config-opts": [ "-Denable-bookmarks=no",
-                             "-Denable-chromaprint=no",
-                             "-Denable-dleyna=no",
-                             "-Denable-dmap=no",
-                             "-Denable-filesystem=no",
-                             "-Denable-flickr=yes",
-                             "-Denable-freebox=no",
-                             "-Denable-gravatar=no",
-                             "-Denable-jamendo=no",
-                             "-Denable-local-metadata=no",
-                             "-Denable-lua-factory=no",
-                             "-Denable-magnatune=no",
-                             "-Denable-metadata-store=no",
-                             "-Denable-opensubtitles=no",
-                             "-Denable-optical-media=no",
-                             "-Denable-podcasts=no",
-                             "-Denable-raitv=no",
-                             "-Denable-shoutcast=no",
-                             "-Denable-thetvdb=no",
-                             "-Denable-tmdb=no",
-                             "-Denable-tracker=no",
-                             "-Denable-vimeo=no",
-                             "-Denable-youtube=no",
-                             "--wrap-mode=nofallback" ],
+            "cleanup": [
+                "/include",
+                "/share/help"
+            ],
+            "config-opts": [
+                "-Denable-bookmarks=no",
+                "-Denable-chromaprint=no",
+                "-Denable-dleyna=no",
+                "-Denable-dmap=no",
+                "-Denable-filesystem=no",
+                "-Denable-flickr=yes",
+                "-Denable-freebox=no",
+                "-Denable-gravatar=no",
+                "-Denable-jamendo=no",
+                "-Denable-local-metadata=no",
+                "-Denable-lua-factory=no",
+                "-Denable-magnatune=no",
+                "-Denable-metadata-store=no",
+                "-Denable-opensubtitles=no",
+                "-Denable-optical-media=no",
+                "-Denable-podcasts=no",
+                "-Denable-raitv=no",
+                "-Denable-shoutcast=no",
+                "-Denable-thetvdb=no",
+                "-Denable-tmdb=no",
+                "-Denable-tracker=no",
+                "-Denable-vimeo=no",
+                "-Denable-youtube=no",
+                "--wrap-mode=nofallback"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.12.tar.xz",
-                    "sha256": "c6b6df086a164d65c206d70139ce80591f8feca3545612e45b823fb4fe4b2577",
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.2/grilo-plugins-0.2.17.tar.xz",
+                    "sha256": "337669098cddf64a84fa9398aa1d7f994fea84bc5f7f1b348e1288f135713781",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "grilo-plugins"
@@ -307,19 +361,21 @@
         {
             "name": "tracker-miners",
             "buildsystem": "meson",
-            "config-opts": [ "-Ddefault_index_single_directories=",
-                             "-Ddefault_index_recursive_directories=&PICTURES",
-                             "-Ddomain_prefix=org.gnome.Photos",
-                             "-Dman=false",
-                             "-Dminer_fs=true",
-                             "-Dminer_fs_cache_location=$XDG_CACHE_HOME/gnome-photos/miner/files",
-                             "-Dminer_rss=false",
-                             "-Dsystemd_user_services=false"],
+            "config-opts": [
+                "-Ddefault_index_single_directories=",
+                "-Ddefault_index_recursive_directories=&PICTURES",
+                "-Ddomain_prefix=org.gnome.Photos",
+                "-Dman=false",
+                "-Dminer_fs=true",
+                "-Dminer_fs_cache_location=$XDG_CACHE_HOME/gnome-photos/miner/files",
+                "-Dminer_rss=false",
+                "-Dsystemd_user_services=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.1/tracker-miners-3.1.0.tar.xz",
-                    "sha256": "695885f7044042b6b53e2ae3f824de36f298c2197de12d171977157771646d00",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.2/tracker-miners-3.2.2.tar.xz",
+                    "sha256": "fd84c71e621bc2b81cacb5f908932436246d1b8a4fc3a6353e2b8dbaebc0236c",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
@@ -330,12 +386,14 @@
         {
             "name": "gnome-photos",
             "buildsystem": "meson",
-            "config-opts": [ "-Ddogtail=false" ],
+            "config-opts": [
+                "-Ddogtail=false"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/40/gnome-photos-40.0.tar.xz",
-                    "sha256": "e02d73e138af8b2868b5cad7faa1bdd278aeade3b6c3c92836511a4e6f3af1af",
+                    "url": "https://download.gnome.org/sources/gnome-photos/42/gnome-photos-42.0.tar.xz",
+                    "sha256": "25cb281425199dec7b045f13f32f8f96034cb0cb8b94d96f9dffaf4f5be68551",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-photos"
