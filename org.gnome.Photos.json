@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "41",
+    "runtime-version": "42",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
     "finish-args": [
@@ -192,7 +192,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "http://www.exiv2.org/builds/exiv2-0.27.5-Source.tar.gz",
+                    "url": "https://github.com/Exiv2/exiv2/releases/download/v0.27.5/exiv2-0.27.5-Source.tar.gz",
                     "sha256": "35a58618ab236a901ca4928b0ad8b31007ebdc0386d904409d825024e45ea6e2"
                 }
             ]
@@ -318,8 +318,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.1/tracker-miners-3.1.0.tar.xz",
-                    "sha256": "695885f7044042b6b53e2ae3f824de36f298c2197de12d171977157771646d00",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.3/tracker-miners-3.3.0.tar.xz",
+                    "sha256": "8b387debb774061c06adfb267a0e0e0f3d21799371bf01d056495ab9b8dd9417",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
@@ -334,16 +334,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/40/gnome-photos-40.0.tar.xz",
-                    "sha256": "e02d73e138af8b2868b5cad7faa1bdd278aeade3b6c3c92836511a4e6f3af1af",
+                    "url": "https://download.gnome.org/sources/gnome-photos/42/gnome-photos-42.0.tar.xz",
+                    "sha256": "25cb281425199dec7b045f13f32f8f96034cb0cb8b94d96f9dffaf4f5be68551",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-photos"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "header_vertical_align.patch"
                 }
             ]
         }
