@@ -303,8 +303,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.2/grilo-0.2.15.tar.xz",
-                    "sha256": "6f5d2583250a68e76d281edaa08adb880d5a78ed46f9ecd22ae4715f1dd66815",
+                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.13.tar.xz",
+                    "sha256": "d14837f22341943ed8a189d9f0827a17016b802d18d0ed080e1413de0fdc927b",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "grilo"
@@ -348,8 +348,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.2/grilo-plugins-0.2.17.tar.xz",
-                    "sha256": "337669098cddf64a84fa9398aa1d7f994fea84bc5f7f1b348e1288f135713781",
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.12.tar.xz",
+                    "sha256": "c6b6df086a164d65c206d70139ce80591f8feca3545612e45b823fb4fe4b2577",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "grilo-plugins"
@@ -374,8 +374,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.2/tracker-miners-3.2.2.tar.xz",
-                    "sha256": "fd84c71e621bc2b81cacb5f908932436246d1b8a4fc3a6353e2b8dbaebc0236c",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.3/tracker-miners-3.3.0.tar.xz",
+                    "sha256": "8b387debb774061c06adfb267a0e0e0f3d21799371bf01d056495ab9b8dd9417",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
