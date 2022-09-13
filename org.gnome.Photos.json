@@ -237,7 +237,8 @@
             "name": "gexiv2",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dintrospection=false"
+                "-Dintrospection=false",
+                "-Dvapi=false"
             ],
             "sources": [
                 {
