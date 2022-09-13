@@ -238,6 +238,7 @@
             "buildsystem": "meson",
             "config-opts": [
                 "-Dintrospection=false",
+                "-Dpython3=false",
                 "-Dvapi=false"
             ],
             "sources": [
