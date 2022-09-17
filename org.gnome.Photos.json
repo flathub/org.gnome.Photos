@@ -237,13 +237,15 @@
             "name": "gexiv2",
             "buildsystem": "meson",
             "config-opts": [
+                "-Dvapi=false",
+                "-Dpython3=false",
                 "-Dintrospection=false"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.1.tar.xz",
-                    "sha256": "8aeafd59653ea88f6b78cb03780ee9fd61a2f993070c5f0d0976bed93ac2bd77",
+                    "url": "https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.0.tar.xz",
+                    "sha256": "e58279a6ff20b6f64fa499615da5e9b57cf65ba7850b72fafdf17221a9d6d69e",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gexiv2"
