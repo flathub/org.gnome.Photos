@@ -75,6 +75,9 @@
         {
             "name": "libdazzle",
             "buildsystem": "meson",
+            "cleanup": [
+                "/bin"
+            ],
             "config-opts": [
                 "-Dwith_introspection=false"
             ],
@@ -361,6 +364,9 @@
         },
         {
             "name": "libiptcdata",
+            "cleanup": [
+                "/bin"
+            ],
             "sources": [
                 {
                     "type": "archive",
@@ -371,6 +377,9 @@
         },
         {
             "name": "exempi",
+            "cleanup": [
+                "/bin"
+            ],
             "config-opts": [
                 "--disable-unittest"
             ],
