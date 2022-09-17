@@ -63,8 +63,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.2.tar.xz",
-                    "sha256": "01fe84cfa0be50c6e401147a2bc5e2f1574326e2293b55c69879be3e82030fd1",
+                    "url": "https://download.gnome.org/sources/geocode-glib/3.26/geocode-glib-3.26.4.tar.xz",
+                    "sha256": "2d9a6826d158470449a173871221596da0f83ebdcff98b90c7049089056a37aa",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "geocode-glib"
@@ -116,8 +116,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.44/gnome-online-accounts-3.44.0.tar.xz",
-                    "sha256": "381d5d4106f435b6f87786aa049be784774e15996adcc02789807afc87ea7342",
+                    "url": "https://download.gnome.org/sources/gnome-online-accounts/3.46/gnome-online-accounts-3.46.0.tar.xz",
+                    "sha256": "5e7859ce4858a6b99d3995ed70527d66e297bb90bbf75ec8780fe9da22c1fcaa",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gnome-online-accounts"
@@ -242,8 +242,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gexiv2/0.12/gexiv2-0.12.1.tar.xz",
-                    "sha256": "8aeafd59653ea88f6b78cb03780ee9fd61a2f993070c5f0d0976bed93ac2bd77",
+                    "url": "https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.0.tar.xz",
+                    "sha256": "e58279a6ff20b6f64fa499615da5e9b57cf65ba7850b72fafdf17221a9d6d69e",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gexiv2"
@@ -303,8 +303,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo/0.3/grilo-0.3.13.tar.xz",
-                    "sha256": "d14837f22341943ed8a189d9f0827a17016b802d18d0ed080e1413de0fdc927b",
+                    "url": "https://download.gnome.org/sources/grilo/0.2/grilo-0.2.15.tar.xz",
+                    "sha256": "6f5d2583250a68e76d281edaa08adb880d5a78ed46f9ecd22ae4715f1dd66815",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "grilo"
@@ -348,8 +348,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/grilo-plugins/0.3/grilo-plugins-0.3.12.tar.xz",
-                    "sha256": "c6b6df086a164d65c206d70139ce80591f8feca3545612e45b823fb4fe4b2577",
+                    "url": "https://download.gnome.org/sources/grilo-plugins/0.2/grilo-plugins-0.2.17.tar.xz",
+                    "sha256": "337669098cddf64a84fa9398aa1d7f994fea84bc5f7f1b348e1288f135713781",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "grilo-plugins"
@@ -374,8 +374,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.3/tracker-miners-3.3.0.tar.xz",
-                    "sha256": "8b387debb774061c06adfb267a0e0e0f3d21799371bf01d056495ab9b8dd9417",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.0.tar.xz",
+                    "sha256": "a2e0365e30811bb61e95c8214b33f4782a3a04e0c6246a06ecd9c01417cd84e6",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
