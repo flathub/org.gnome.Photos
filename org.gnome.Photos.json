@@ -1,7 +1,7 @@
 {
     "app-id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
     "finish-args": [
@@ -47,8 +47,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/babl/0.1/babl-0.1.80.tar.xz",
-                    "sha256": "f75ccc39af42585099bcb4731071dc5316b7542c5e232f63e278cd1ea2c04f8e"
+                    "url": "https://download.gimp.org/pub/babl/0.1/babl-0.1.96.tar.xz",
+                    "sha256": "33673fe459a983f411245a49f81fd7f1966af1ea8eca9b095a940c542b8545f6"
                 }
             ]
         },
@@ -209,8 +209,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.acc.umu.se/pub/gimp/gegl/0.4/gegl-0.4.26.tar.xz",
-                    "sha256": "0f371e2ed2b92162fefd3dde743e648ca08a6a1b2b05004867fbddc7e211e424"
+                    "url": "https://download.gimp.org/pub/gegl/0.4/gegl-0.4.38.tar.xz",
+                    "sha256": "e4a33c8430a5042fba8439b595348e71870f0d95fbf885ff553f9020c1bed750"
                 }
             ]
         },
@@ -289,8 +289,6 @@
             "name": "tracker-miners",
             "buildsystem": "meson",
             "config-opts": [
-                "-Ddefault_index_single_directories=",
-                "-Ddefault_index_recursive_directories=&PICTURES",
                 "-Ddomain_prefix=org.gnome.Photos",
                 "-Dman=false",
                 "-Dminer_fs=true",
@@ -301,8 +299,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.3/tracker-miners-3.3.0.tar.xz",
-                    "sha256": "8b387debb774061c06adfb267a0e0e0f3d21799371bf01d056495ab9b8dd9417",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.0.tar.xz",
+                    "sha256": "a2e0365e30811bb61e95c8214b33f4782a3a04e0c6246a06ecd9c01417cd84e6",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
