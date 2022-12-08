@@ -340,6 +340,7 @@
                     "sha256": "c7ac7458d533f29d955011c74b76224d79ea31bcc12e9d6d0ce7b6c3704d08e1",
                     "x-checker-data": {
                         "type": "gnome",
+                        "is-important": true,
                         "name": "gnome-photos"
                     }
                 }
