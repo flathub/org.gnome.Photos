@@ -303,8 +303,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.1.tar.xz",
-                    "sha256": "2fce0ec85fb7617c8b2887c22797740d5dec84ec036db74d6c208bbab5c58c24",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.2.tar.xz",
+                    "sha256": "101e3608f1c28bfed8ae25522f7a720b559f889a76e280afbe50a4d8b064f92c",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
