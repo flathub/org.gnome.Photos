@@ -106,8 +106,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/rest/0.9/rest-0.9.1.tar.xz",
-                    "sha256": "9266a5c10ece383e193dfb7ffb07b509cc1f51521ab8dad76af96ed14212c2e3",
+                    "url": "https://download.gnome.org/sources/rest/0.8/rest-0.8.1.tar.xz",
+                    "sha256": "0513aad38e5d3cedd4ae3c551634e3be1b9baaa79775e53b2dba9456f15b01c9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "rest"
@@ -297,8 +297,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.2.tar.xz",
-                    "sha256": "101e3608f1c28bfed8ae25522f7a720b559f889a76e280afbe50a4d8b064f92c",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.3.tar.xz",
+                    "sha256": "8e4f3976472641b648d0f8f20debae1b1629ca5b560b8616e117d29d756fbeeb",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "tracker-miners"
@@ -334,8 +334,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gnome-photos/43/gnome-photos-43.0.tar.xz",
-                    "sha256": "c7ac7458d533f29d955011c74b76224d79ea31bcc12e9d6d0ce7b6c3704d08e1",
+                    "url": "https://download.gnome.org/sources/gnome-photos/44/gnome-photos-44.0.tar.xz",
+                    "sha256": "e78e210397d3c62809c6cd5521da6eccb4a11ddea5bf2af8632a47f4da5c829e",
                     "x-checker-data": {
                         "type": "gnome",
                         "is-important": true,
