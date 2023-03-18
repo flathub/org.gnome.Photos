@@ -16,7 +16,6 @@
         "--socket=wayland",
         "--talk-name=org.freedesktop.FileManager1",
         "--talk-name=org.freedesktop.Tracker3.Miner.Files.Control",
-        "--talk-name=com.intel.dleyna-renderer",
         "--talk-name=org.gnome.ControlCenter",
         "--talk-name=org.gnome.SettingsDaemon",
         "--talk-name=org.gnome.SettingsDaemon.Housekeeping",
@@ -113,6 +112,74 @@
                         "name": "rest"
                     }
                 }
+            ]
+        },
+        {
+            "name": "gssdp",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gssdp.git",
+                "commit": "6eeaf27aec6ff11f325ff633b52bd56dbc1435aa",
+                "tag": "gssdp-1.6.0"
+            }
+            ]
+        },
+        {
+            "name": "gupnp",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gupnp.git",
+                "commit": "f05648e240c99be32911fb0c6de84e5954470e56",
+                "tag": "gupnp-1.6.0"
+            }
+            ]
+        },
+        {
+            "name": "gupnp-av",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gupnp-av.git",
+                "commit": "86f148ebb920a8113190fd3e6cae636c9fdd3ca7",
+                "tag": "gupnp-av-0.14.1"
+            }
+            ]
+        },
+        {
+            "name": "gupnp-dlna",
+            "config-opts": [
+                "--disable-Werror"
+            ],
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gupnp-dlna.git",
+                "commit": "cc09daae47ef0e030895edbeba58636c76f53b3d",
+                "tag": "gupnp-dlna-0.12.0"
+            }
+            ]
+        },
+        {
+            "name": "dleyna",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dserver_name=org.gnome.Photos.dleyna-server",
+                "-Dconnector=true",
+                "-Dbuild_server=true",
+                "-Dman_pages=false",
+                "-Ddocs=false"
+            ],
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://gitlab.gnome.org/World/dLeyna.git",
+                "commit": "db67c3071af7d708a66ac6f13c31b052078955b2"
+            }
             ]
         },
         {
