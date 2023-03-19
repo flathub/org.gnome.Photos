@@ -410,6 +410,10 @@
                         "is-important": true,
                         "name": "gnome-photos"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/photos-dlna-dbusname.patch"
                 }
             ]
         }
