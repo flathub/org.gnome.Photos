@@ -1,0 +1,20 @@
+--- gnome-photos-44.0/src/photos-dlna-renderers-manager.c-orig	2023-03-19 13:25:06.902311294 -0400
++++ gnome-photos-44.0/src/photos-dlna-renderers-manager.c	2023-03-19 13:46:52.756608222 -0400
+@@ -103,7 +103,7 @@
+ {
+   photos_dlna_renderer_new_for_bus (G_BUS_TYPE_SESSION,
+                                     G_DBUS_PROXY_FLAGS_NONE,
+-                                    "com.intel.dleyna-renderer",
++                                    "org.gnome.Photos.dleyna-renderer",
+                                     object_path,
+                                     NULL, /* GCancellable */
+                                     photos_dlna_renderers_manager_renderer_new_cb,
+@@ -216,7 +216,7 @@
+ {
+   dleyna_renderer_manager_proxy_new_for_bus (G_BUS_TYPE_SESSION,
+                                              G_DBUS_PROXY_FLAGS_NONE,
+-                                             "com.intel.dleyna-renderer",
++                                             "org.gnome.Photos.dleyna-renderer",
+                                              "/com/intel/dLeynaRenderer",
+                                              NULL, /* GCancellable */
+                                              photos_dlna_renderers_manager_proxy_new_cb,
