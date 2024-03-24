@@ -1,7 +1,7 @@
 {
     "id": "org.gnome.Photos",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
     "command": "gnome-photos",
     "finish-args": [
@@ -47,8 +47,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gimp.org/pub/babl/0.1/babl-0.1.96.tar.xz",
-                    "sha256": "33673fe459a983f411245a49f81fd7f1966af1ea8eca9b095a940c542b8545f6"
+                    "url" : "https://download.gimp.org/pub/babl/0.1/babl-0.1.108.tar.xz",
+                    "sha256" : "26defe9deaab7ac4d0e076cab49c2a0d6ebd0df0c31fd209925a5f07edee1475"
                 }
             ]
         },
@@ -194,8 +194,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.0.tar.xz",
-                    "sha256": "e58279a6ff20b6f64fa499615da5e9b57cf65ba7850b72fafdf17221a9d6d69e",
+                    "url": "https://download.gnome.org/sources/gexiv2/0.14/gexiv2-0.14.2.tar.xz",
+                    "sha256": "2a0c9cf48fbe8b3435008866ffd40b8eddb0667d2212b42396fdf688e93ce0be",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gexiv2"
@@ -215,8 +215,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gimp.org/pub/gegl/0.4/gegl-0.4.42.tar.xz",
-                    "sha256": "aba83a0cbaa6c56edc29ea22f2e8172950a53b96daa51592083d59222bdde02d"
+                    "url": "https://download.gimp.org/pub/gegl/0.4/gegl-0.4.48.tar.xz",
+                    "sha256": "418c26d94be8805d7d98f6de0c6825ca26bd74fcacb6c188da47533d9ee28247"
                 }
             ]
         },
@@ -294,16 +294,18 @@
                 "-Dminer_fs=true",
                 "-Dminer_fs_cache_location=$XDG_CACHE_HOME/gnome-photos/miner/files",
                 "-Dminer_rss=false",
+                "-Dbattery_detection=none",
                 "-Dsystemd_user_services=false"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/tracker-miners/3.4/tracker-miners-3.4.3.tar.xz",
-                    "sha256": "8e4f3976472641b648d0f8f20debae1b1629ca5b560b8616e117d29d756fbeeb",
+                    "url": "https://download.gnome.org/sources/tracker-miners/3.7/tracker-miners-3.7.0.tar.xz",
+                    "sha256": "74e796c1625094a8a2175993c7907281e97ab6e002578e846b8f4ca44e36bf61",
                     "x-checker-data": {
                         "type": "gnome",
-                        "name": "tracker-miners"
+                        "name": "tracker-miners",
+                        "stable-only": false
                     }
                 }
             ]
@@ -343,6 +345,10 @@
                         "is-important": true,
                         "name": "gnome-photos"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/gnome-photos-appadata.patch"
                 }
             ]
         }
