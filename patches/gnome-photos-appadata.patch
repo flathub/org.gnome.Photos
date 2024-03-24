@@ -1,0 +1,29 @@
+diff --git a/data/org.gnome.Photos.appdata.xml.in b/data/org.gnome.Photos.appdata.xml.in
+index 9c5fdaf..5d19362 100644
+--- a/data/org.gnome.Photos.appdata.xml.in
++++ b/data/org.gnome.Photos.appdata.xml.in
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2013 – 2021 Red Hat, Inc. -->
+ <component type="desktop">
+-  <id>org.gnome.Photos.desktop</id>
++  <id>org.gnome.Photos</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0+</project_license>
+   <name>Photos</name>
+@@ -27,6 +27,7 @@
+           editor for more advanced changes</li>
+     </ul>
+   </description>
++  <launchable type="desktop-id">org.gnome.Photos.desktop</launchable>
+   <kudos>
+     <kudo>AppMenu</kudo>
+     <kudo>HiDpiIcon</kudo>
+@@ -104,7 +105,6 @@
+     </screenshot>
+   </screenshots>
+   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-photos/issues</url>
+-  <url type="donation">http://www.gnome.org/friends</url>
+   <url type="homepage">https://wiki.gnome.org/Apps/Photos</url>
+   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
+   <developer_name>The GNOME Project</developer_name>
